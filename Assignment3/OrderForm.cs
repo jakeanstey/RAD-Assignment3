@@ -15,6 +15,7 @@ namespace Assignment3
     {
         private Movie movie;
         private SelectionForm selectionForm;
+        private double cost, subtotal, salesTax, grandTotal;
 
         public OrderForm(SelectionForm selectionForm)
         {
@@ -32,10 +33,10 @@ namespace Assignment3
 
         private void Calculate(double additionalCosts)
         {
-            double cost = movie.GetCost();
-            double subtotal = cost + additionalCosts;
-            double salesTax = subtotal * 0.13;
-            double grandTotal = subtotal + salesTax;
+            cost = movie.GetCost();
+            subtotal = cost + additionalCosts;
+            salesTax = subtotal * 0.13;
+            grandTotal = subtotal + salesTax;
             CostTextBox.Text = "$" + cost.ToString("0.##");
             SubtotalTextBox.Text = "$" + subtotal.ToString("0.##");
             SalesTaxTextBox.Text = "$" + salesTax.ToString("0.##");
@@ -83,6 +84,23 @@ namespace Assignment3
         {
             this.movie = movie;
             UpdateMovie();
+        }
+
+        private void Stream()
+        {
+            StreamForm streamForm = new StreamForm(MovieTitleTextBox.Text, grandTotal);
+            streamForm.Show();
+            this.Close();
+        }
+
+        private void StreamMenuSelection_Click(object sender, EventArgs e)
+        {
+            Stream();
+        }
+
+        private void StreamButton_Click(object sender, EventArgs e)
+        {
+            Stream();
         }
     }
 }

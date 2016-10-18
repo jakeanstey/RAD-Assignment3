@@ -12,9 +12,28 @@ namespace Assignment3
 {
     public partial class StreamForm : Form
     {
-        public StreamForm()
+        private String title;
+        private double total;
+
+        public StreamForm(String title, double total)
         {
             InitializeComponent();
+            this.Text = title;
+            this.title = title;
+            this.total = total;
+
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            CCAuthLabel.Text = "Your credit card has been charged $" + total.ToString("0.##");
+            MovieStreamNotificationLabel.Text = title + " will begin streaming now.";
+        }
+
+        private void OkayButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

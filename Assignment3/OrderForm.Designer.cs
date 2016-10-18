@@ -95,6 +95,7 @@
             this.StreamMenuSelection.Name = "StreamMenuSelection";
             this.StreamMenuSelection.Size = new System.Drawing.Size(152, 22);
             this.StreamMenuSelection.Text = "Stream";
+            this.StreamMenuSelection.Click += new System.EventHandler(this.StreamMenuSelection_Click);
             // 
             // ExitMenuSelection
             // 
@@ -159,6 +160,7 @@
             this.StreamButton.TabIndex = 9;
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
+            this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
             // 
             // BackButton
             // 
