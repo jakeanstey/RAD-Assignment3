@@ -89,6 +89,20 @@ namespace Assignment3
             MoviePriceTextBox.Text = "$" + SelectedMovie.GetCost();
 
             MoviePosterPictureBox.Image = (Image)Resources.ResourceManager.GetObject(SelectedMovie.GetImagePath());
+
+            NextButton.Enabled = true;
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm(this, GetMovieByName(MovieComboBox.SelectedItem.ToString()));
+            orderForm.Show();
+            this.Hide();
         }
     }
 }

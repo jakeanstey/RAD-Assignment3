@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment3
 {
-    class Movie
+    public class Movie
     {
         private String Title, Genre, Director, ImagePath;
         private int Year;
