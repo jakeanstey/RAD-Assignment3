@@ -15,11 +15,13 @@ namespace Assignment3
     public partial class SelectionForm : Form
     {
         private List<Movie> Movies = new List<Movie>();
+        private OrderForm orderForm;
 
         public SelectionForm()
         {
             InitializeComponent();
             Initialize();
+            orderForm = new OrderForm(this);
         }
 
         private void Initialize()
@@ -100,7 +102,7 @@ namespace Assignment3
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            OrderForm orderForm = new OrderForm(this, GetMovieByName(MovieComboBox.SelectedItem.ToString()));
+            orderForm.SetMovie(GetMovieByName(MovieComboBox.SelectedItem.ToString()));
             orderForm.Show();
             this.Hide();
         }

@@ -16,15 +16,13 @@ namespace Assignment3
         private Movie movie;
         private SelectionForm selectionForm;
 
-        public OrderForm(SelectionForm selectionForm, Movie movie)
+        public OrderForm(SelectionForm selectionForm)
         {
             InitializeComponent();
-            this.movie = movie;
             this.selectionForm = selectionForm;
-            initialize();
         }
 
-        private void initialize()
+        private void UpdateMovie()
         {
             MovieTitleTextBox.Text = movie.GetName() + " (" + movie.GetYear() + ")";
             MovieGenreTextBox.Text = movie.GetGenre();
@@ -62,7 +60,7 @@ namespace Assignment3
         private void BackButton_Click(object sender, EventArgs e)
         {
             selectionForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -79,6 +77,12 @@ namespace Assignment3
                 DVDPriceLabel.Visible = false;
                 DVDPriceTextBox.Visible = false;
             }
+        }
+
+        public void SetMovie(Movie movie)
+        {
+            this.movie = movie;
+            UpdateMovie();
         }
     }
 }

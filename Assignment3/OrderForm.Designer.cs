@@ -357,7 +357,7 @@
             this.Name = "OrderForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderForm";
+            this.Text = "Your Order";
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.MovieSelectedGroupBox.ResumeLayout(false);
