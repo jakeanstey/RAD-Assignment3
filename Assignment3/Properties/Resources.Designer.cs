@@ -143,6 +143,16 @@ namespace Assignment3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Netlifx {
+            get {
+                object obj = ResourceManager.GetObject("Netlifx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap suicideSquad {
             get {
                 object obj = ResourceManager.GetObject("suicideSquad", resourceCulture);

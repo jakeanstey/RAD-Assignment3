@@ -12,6 +12,15 @@ namespace Assignment3
         private int Year;
         private double Cost;
 
+        /// <summary>
+        /// Movie Constructor
+        /// </summary>
+        /// <param name="Title"></param>
+        /// <param name="Genre"></param>
+        /// <param name="Year"></param>
+        /// <param name="Director"></param>
+        /// <param name="Cost"></param>
+        /// <param name="ImagePath"></param>
         public Movie(String Title, String Genre, int Year, String Director, double Cost, String ImagePath)
         {
             this.Title = Title;
@@ -22,10 +31,6 @@ namespace Assignment3
             this.ImagePath = ImagePath;
         }
 
-        /// <summary>
-        /// Returns the movie title.
-        /// </summary>
-        /// <returns></returns>
         public String GetName()
         {
             return Title;

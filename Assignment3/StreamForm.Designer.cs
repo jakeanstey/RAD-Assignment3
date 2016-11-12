@@ -37,7 +37,7 @@
             // ThankYouLabel
             // 
             this.ThankYouLabel.AutoSize = true;
-            this.ThankYouLabel.Location = new System.Drawing.Point(82, 33);
+            this.ThankYouLabel.Location = new System.Drawing.Point(82, 27);
             this.ThankYouLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ThankYouLabel.Name = "ThankYouLabel";
             this.ThankYouLabel.Size = new System.Drawing.Size(352, 23);
@@ -46,21 +46,22 @@
             // 
             // CCAuthLabel
             // 
-            this.CCAuthLabel.AutoSize = true;
-            this.CCAuthLabel.Location = new System.Drawing.Point(56, 70);
+            this.CCAuthLabel.Location = new System.Drawing.Point(12, 61);
             this.CCAuthLabel.Name = "CCAuthLabel";
-            this.CCAuthLabel.Size = new System.Drawing.Size(394, 23);
+            this.CCAuthLabel.Size = new System.Drawing.Size(492, 23);
             this.CCAuthLabel.TabIndex = 1;
             this.CCAuthLabel.Text = "Your credit card has been charged $x.xx";
+            this.CCAuthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MovieStreamNotificationLabel
             // 
-            this.MovieStreamNotificationLabel.AutoSize = true;
-            this.MovieStreamNotificationLabel.Location = new System.Drawing.Point(29, 107);
+            this.MovieStreamNotificationLabel.Location = new System.Drawing.Point(12, 95);
+            this.MovieStreamNotificationLabel.MaximumSize = new System.Drawing.Size(492, 46);
             this.MovieStreamNotificationLabel.Name = "MovieStreamNotificationLabel";
-            this.MovieStreamNotificationLabel.Size = new System.Drawing.Size(405, 23);
+            this.MovieStreamNotificationLabel.Size = new System.Drawing.Size(492, 46);
             this.MovieStreamNotificationLabel.TabIndex = 2;
             this.MovieStreamNotificationLabel.Text = "<Movie Name> will begin streaming now.";
+            this.MovieStreamNotificationLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // OkayButton
             // 

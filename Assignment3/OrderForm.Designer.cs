@@ -36,30 +36,30 @@
             this.HelpMenuOption = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutMenuSelection = new System.Windows.Forms.ToolStripMenuItem();
             this.MovieSelectedGroupBox = new System.Windows.Forms.GroupBox();
+            this.MoviePosterPictureBox = new System.Windows.Forms.PictureBox();
+            this.MovieGenreLabel = new System.Windows.Forms.Label();
+            this.MovieGenreTextBox = new System.Windows.Forms.TextBox();
+            this.MovieTitleTextBox = new System.Windows.Forms.TextBox();
+            this.MovieTitleLabel = new System.Windows.Forms.Label();
             this.YourOrderGroupBox = new System.Windows.Forms.GroupBox();
+            this.DVDPriceTextBox = new System.Windows.Forms.TextBox();
+            this.DVDPriceLabel = new System.Windows.Forms.Label();
+            this.DVDCheckBox = new System.Windows.Forms.CheckBox();
+            this.GrandTotalLabel = new System.Windows.Forms.Label();
+            this.SalesTaxLabel = new System.Windows.Forms.Label();
+            this.SubtotalLabel = new System.Windows.Forms.Label();
+            this.CostLabel = new System.Windows.Forms.Label();
+            this.GrandTotalTextBox = new System.Windows.Forms.TextBox();
+            this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
+            this.SubtotalTextBox = new System.Windows.Forms.TextBox();
+            this.CostTextBox = new System.Windows.Forms.TextBox();
             this.StreamButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
-            this.MovieTitleLabel = new System.Windows.Forms.Label();
-            this.MovieTitleTextBox = new System.Windows.Forms.TextBox();
-            this.MovieGenreTextBox = new System.Windows.Forms.TextBox();
-            this.MovieGenreLabel = new System.Windows.Forms.Label();
-            this.MoviePosterPictureBox = new System.Windows.Forms.PictureBox();
-            this.CostTextBox = new System.Windows.Forms.TextBox();
-            this.SubtotalTextBox = new System.Windows.Forms.TextBox();
-            this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
-            this.GrandTotalTextBox = new System.Windows.Forms.TextBox();
-            this.CostLabel = new System.Windows.Forms.Label();
-            this.SubtotalLabel = new System.Windows.Forms.Label();
-            this.SalesTaxLabel = new System.Windows.Forms.Label();
-            this.GrandTotalLabel = new System.Windows.Forms.Label();
-            this.DVDCheckBox = new System.Windows.Forms.CheckBox();
-            this.DVDPriceLabel = new System.Windows.Forms.Label();
-            this.DVDPriceTextBox = new System.Windows.Forms.TextBox();
             this.Menu.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
-            this.YourOrderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoviePosterPictureBox)).BeginInit();
+            this.YourOrderGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menu
@@ -95,14 +95,14 @@
             this.StreamMenuSelection.Name = "StreamMenuSelection";
             this.StreamMenuSelection.Size = new System.Drawing.Size(152, 22);
             this.StreamMenuSelection.Text = "Stream";
-            this.StreamMenuSelection.Click += new System.EventHandler(this.StreamMenuSelection_Click);
+            this.StreamMenuSelection.Click += new System.EventHandler(this.StreamButton_Click);
             // 
             // ExitMenuSelection
             // 
             this.ExitMenuSelection.Name = "ExitMenuSelection";
             this.ExitMenuSelection.Size = new System.Drawing.Size(152, 22);
             this.ExitMenuSelection.Text = "Exit";
-            this.ExitMenuSelection.Click += new System.EventHandler(this.ExitMenuSelection_Click);
+            this.ExitMenuSelection.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // HelpMenuOption
             // 
@@ -115,7 +115,7 @@
             // AboutMenuSelection
             // 
             this.AboutMenuSelection.Name = "AboutMenuSelection";
-            this.AboutMenuSelection.Size = new System.Drawing.Size(152, 22);
+            this.AboutMenuSelection.Size = new System.Drawing.Size(107, 22);
             this.AboutMenuSelection.Text = "About";
             // 
             // MovieSelectedGroupBox
@@ -131,6 +131,55 @@
             this.MovieSelectedGroupBox.TabIndex = 2;
             this.MovieSelectedGroupBox.TabStop = false;
             this.MovieSelectedGroupBox.Text = "Movie Selected";
+            // 
+            // MoviePosterPictureBox
+            // 
+            this.MoviePosterPictureBox.Location = new System.Drawing.Point(7, 186);
+            this.MoviePosterPictureBox.Name = "MoviePosterPictureBox";
+            this.MoviePosterPictureBox.Size = new System.Drawing.Size(283, 245);
+            this.MoviePosterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MoviePosterPictureBox.TabIndex = 4;
+            this.MoviePosterPictureBox.TabStop = false;
+            // 
+            // MovieGenreLabel
+            // 
+            this.MovieGenreLabel.AutoSize = true;
+            this.MovieGenreLabel.Location = new System.Drawing.Point(11, 116);
+            this.MovieGenreLabel.Name = "MovieGenreLabel";
+            this.MovieGenreLabel.Size = new System.Drawing.Size(66, 23);
+            this.MovieGenreLabel.TabIndex = 3;
+            this.MovieGenreLabel.Text = "Genre";
+            // 
+            // MovieGenreTextBox
+            // 
+            this.MovieGenreTextBox.BackColor = System.Drawing.Color.White;
+            this.MovieGenreTextBox.Enabled = false;
+            this.MovieGenreTextBox.Location = new System.Drawing.Point(6, 142);
+            this.MovieGenreTextBox.Name = "MovieGenreTextBox";
+            this.MovieGenreTextBox.ReadOnly = true;
+            this.MovieGenreTextBox.Size = new System.Drawing.Size(284, 37);
+            this.MovieGenreTextBox.TabIndex = 2;
+            this.MovieGenreTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MovieTitleTextBox
+            // 
+            this.MovieTitleTextBox.BackColor = System.Drawing.Color.White;
+            this.MovieTitleTextBox.Enabled = false;
+            this.MovieTitleTextBox.Location = new System.Drawing.Point(6, 72);
+            this.MovieTitleTextBox.Name = "MovieTitleTextBox";
+            this.MovieTitleTextBox.ReadOnly = true;
+            this.MovieTitleTextBox.Size = new System.Drawing.Size(284, 37);
+            this.MovieTitleTextBox.TabIndex = 1;
+            this.MovieTitleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MovieTitleLabel
+            // 
+            this.MovieTitleLabel.AutoSize = true;
+            this.MovieTitleLabel.Location = new System.Drawing.Point(7, 46);
+            this.MovieTitleLabel.Name = "MovieTitleLabel";
+            this.MovieTitleLabel.Size = new System.Drawing.Size(52, 23);
+            this.MovieTitleLabel.TabIndex = 0;
+            this.MovieTitleLabel.Text = "Title";
             // 
             // YourOrderGroupBox
             // 
@@ -151,6 +200,114 @@
             this.YourOrderGroupBox.TabIndex = 3;
             this.YourOrderGroupBox.TabStop = false;
             this.YourOrderGroupBox.Text = "Your Order";
+            // 
+            // DVDPriceTextBox
+            // 
+            this.DVDPriceTextBox.BackColor = System.Drawing.Color.White;
+            this.DVDPriceTextBox.Enabled = false;
+            this.DVDPriceTextBox.Location = new System.Drawing.Point(215, 86);
+            this.DVDPriceTextBox.Name = "DVDPriceTextBox";
+            this.DVDPriceTextBox.ReadOnly = true;
+            this.DVDPriceTextBox.Size = new System.Drawing.Size(100, 37);
+            this.DVDPriceTextBox.TabIndex = 10;
+            this.DVDPriceTextBox.Visible = false;
+            // 
+            // DVDPriceLabel
+            // 
+            this.DVDPriceLabel.AutoSize = true;
+            this.DVDPriceLabel.Location = new System.Drawing.Point(84, 89);
+            this.DVDPriceLabel.Name = "DVDPriceLabel";
+            this.DVDPriceLabel.Size = new System.Drawing.Size(102, 23);
+            this.DVDPriceLabel.TabIndex = 9;
+            this.DVDPriceLabel.Text = "DVD Price";
+            this.DVDPriceLabel.Visible = false;
+            // 
+            // DVDCheckBox
+            // 
+            this.DVDCheckBox.AutoSize = true;
+            this.DVDCheckBox.Location = new System.Drawing.Point(39, 363);
+            this.DVDCheckBox.Name = "DVDCheckBox";
+            this.DVDCheckBox.Size = new System.Drawing.Size(263, 27);
+            this.DVDCheckBox.TabIndex = 8;
+            this.DVDCheckBox.Text = "Order DVD copy ($10.00)";
+            this.DVDCheckBox.UseVisualStyleBackColor = true;
+            this.DVDCheckBox.CheckedChanged += new System.EventHandler(this.DVDCheckBox_CheckedChanged);
+            // 
+            // GrandTotalLabel
+            // 
+            this.GrandTotalLabel.AutoSize = true;
+            this.GrandTotalLabel.Location = new System.Drawing.Point(65, 220);
+            this.GrandTotalLabel.Name = "GrandTotalLabel";
+            this.GrandTotalLabel.Size = new System.Drawing.Size(121, 23);
+            this.GrandTotalLabel.TabIndex = 7;
+            this.GrandTotalLabel.Text = "Grand Total";
+            // 
+            // SalesTaxLabel
+            // 
+            this.SalesTaxLabel.AutoSize = true;
+            this.SalesTaxLabel.Location = new System.Drawing.Point(32, 176);
+            this.SalesTaxLabel.Name = "SalesTaxLabel";
+            this.SalesTaxLabel.Size = new System.Drawing.Size(154, 23);
+            this.SalesTaxLabel.TabIndex = 6;
+            this.SalesTaxLabel.Text = "Sales Tax (13%)";
+            // 
+            // SubtotalLabel
+            // 
+            this.SubtotalLabel.AutoSize = true;
+            this.SubtotalLabel.Location = new System.Drawing.Point(99, 132);
+            this.SubtotalLabel.Name = "SubtotalLabel";
+            this.SubtotalLabel.Size = new System.Drawing.Size(87, 23);
+            this.SubtotalLabel.TabIndex = 5;
+            this.SubtotalLabel.Text = "Subtotal";
+            // 
+            // CostLabel
+            // 
+            this.CostLabel.AutoSize = true;
+            this.CostLabel.Location = new System.Drawing.Point(134, 46);
+            this.CostLabel.Name = "CostLabel";
+            this.CostLabel.Size = new System.Drawing.Size(52, 23);
+            this.CostLabel.TabIndex = 4;
+            this.CostLabel.Text = "Cost";
+            // 
+            // GrandTotalTextBox
+            // 
+            this.GrandTotalTextBox.BackColor = System.Drawing.Color.White;
+            this.GrandTotalTextBox.Enabled = false;
+            this.GrandTotalTextBox.Location = new System.Drawing.Point(215, 217);
+            this.GrandTotalTextBox.Name = "GrandTotalTextBox";
+            this.GrandTotalTextBox.ReadOnly = true;
+            this.GrandTotalTextBox.Size = new System.Drawing.Size(100, 37);
+            this.GrandTotalTextBox.TabIndex = 3;
+            // 
+            // SalesTaxTextBox
+            // 
+            this.SalesTaxTextBox.BackColor = System.Drawing.Color.White;
+            this.SalesTaxTextBox.Enabled = false;
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(215, 173);
+            this.SalesTaxTextBox.Name = "SalesTaxTextBox";
+            this.SalesTaxTextBox.ReadOnly = true;
+            this.SalesTaxTextBox.Size = new System.Drawing.Size(100, 37);
+            this.SalesTaxTextBox.TabIndex = 2;
+            // 
+            // SubtotalTextBox
+            // 
+            this.SubtotalTextBox.BackColor = System.Drawing.Color.White;
+            this.SubtotalTextBox.Enabled = false;
+            this.SubtotalTextBox.Location = new System.Drawing.Point(215, 129);
+            this.SubtotalTextBox.Name = "SubtotalTextBox";
+            this.SubtotalTextBox.ReadOnly = true;
+            this.SubtotalTextBox.Size = new System.Drawing.Size(100, 37);
+            this.SubtotalTextBox.TabIndex = 1;
+            // 
+            // CostTextBox
+            // 
+            this.CostTextBox.BackColor = System.Drawing.Color.White;
+            this.CostTextBox.Enabled = false;
+            this.CostTextBox.Location = new System.Drawing.Point(215, 43);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
+            this.CostTextBox.Size = new System.Drawing.Size(100, 37);
+            this.CostTextBox.TabIndex = 0;
             // 
             // StreamButton
             // 
@@ -182,163 +339,6 @@
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // MovieTitleLabel
-            // 
-            this.MovieTitleLabel.AutoSize = true;
-            this.MovieTitleLabel.Location = new System.Drawing.Point(7, 46);
-            this.MovieTitleLabel.Name = "MovieTitleLabel";
-            this.MovieTitleLabel.Size = new System.Drawing.Size(52, 23);
-            this.MovieTitleLabel.TabIndex = 0;
-            this.MovieTitleLabel.Text = "Title";
-            // 
-            // MovieTitleTextBox
-            // 
-            this.MovieTitleTextBox.BackColor = System.Drawing.Color.White;
-            this.MovieTitleTextBox.Enabled = false;
-            this.MovieTitleTextBox.Location = new System.Drawing.Point(6, 72);
-            this.MovieTitleTextBox.Name = "MovieTitleTextBox";
-            this.MovieTitleTextBox.ReadOnly = true;
-            this.MovieTitleTextBox.Size = new System.Drawing.Size(284, 37);
-            this.MovieTitleTextBox.TabIndex = 1;
-            this.MovieTitleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // MovieGenreTextBox
-            // 
-            this.MovieGenreTextBox.BackColor = System.Drawing.Color.White;
-            this.MovieGenreTextBox.Enabled = false;
-            this.MovieGenreTextBox.Location = new System.Drawing.Point(6, 142);
-            this.MovieGenreTextBox.Name = "MovieGenreTextBox";
-            this.MovieGenreTextBox.ReadOnly = true;
-            this.MovieGenreTextBox.Size = new System.Drawing.Size(284, 37);
-            this.MovieGenreTextBox.TabIndex = 2;
-            this.MovieGenreTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // MovieGenreLabel
-            // 
-            this.MovieGenreLabel.AutoSize = true;
-            this.MovieGenreLabel.Location = new System.Drawing.Point(11, 116);
-            this.MovieGenreLabel.Name = "MovieGenreLabel";
-            this.MovieGenreLabel.Size = new System.Drawing.Size(66, 23);
-            this.MovieGenreLabel.TabIndex = 3;
-            this.MovieGenreLabel.Text = "Genre";
-            // 
-            // MoviePosterPictureBox
-            // 
-            this.MoviePosterPictureBox.Location = new System.Drawing.Point(7, 186);
-            this.MoviePosterPictureBox.Name = "MoviePosterPictureBox";
-            this.MoviePosterPictureBox.Size = new System.Drawing.Size(283, 245);
-            this.MoviePosterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MoviePosterPictureBox.TabIndex = 4;
-            this.MoviePosterPictureBox.TabStop = false;
-            // 
-            // CostTextBox
-            // 
-            this.CostTextBox.BackColor = System.Drawing.Color.White;
-            this.CostTextBox.Enabled = false;
-            this.CostTextBox.Location = new System.Drawing.Point(215, 43);
-            this.CostTextBox.Name = "CostTextBox";
-            this.CostTextBox.ReadOnly = true;
-            this.CostTextBox.Size = new System.Drawing.Size(100, 37);
-            this.CostTextBox.TabIndex = 0;
-            // 
-            // SubtotalTextBox
-            // 
-            this.SubtotalTextBox.BackColor = System.Drawing.Color.White;
-            this.SubtotalTextBox.Enabled = false;
-            this.SubtotalTextBox.Location = new System.Drawing.Point(215, 129);
-            this.SubtotalTextBox.Name = "SubtotalTextBox";
-            this.SubtotalTextBox.ReadOnly = true;
-            this.SubtotalTextBox.Size = new System.Drawing.Size(100, 37);
-            this.SubtotalTextBox.TabIndex = 1;
-            // 
-            // SalesTaxTextBox
-            // 
-            this.SalesTaxTextBox.BackColor = System.Drawing.Color.White;
-            this.SalesTaxTextBox.Enabled = false;
-            this.SalesTaxTextBox.Location = new System.Drawing.Point(215, 173);
-            this.SalesTaxTextBox.Name = "SalesTaxTextBox";
-            this.SalesTaxTextBox.ReadOnly = true;
-            this.SalesTaxTextBox.Size = new System.Drawing.Size(100, 37);
-            this.SalesTaxTextBox.TabIndex = 2;
-            // 
-            // GrandTotalTextBox
-            // 
-            this.GrandTotalTextBox.BackColor = System.Drawing.Color.White;
-            this.GrandTotalTextBox.Enabled = false;
-            this.GrandTotalTextBox.Location = new System.Drawing.Point(215, 217);
-            this.GrandTotalTextBox.Name = "GrandTotalTextBox";
-            this.GrandTotalTextBox.ReadOnly = true;
-            this.GrandTotalTextBox.Size = new System.Drawing.Size(100, 37);
-            this.GrandTotalTextBox.TabIndex = 3;
-            // 
-            // CostLabel
-            // 
-            this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(134, 46);
-            this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(52, 23);
-            this.CostLabel.TabIndex = 4;
-            this.CostLabel.Text = "Cost";
-            // 
-            // SubtotalLabel
-            // 
-            this.SubtotalLabel.AutoSize = true;
-            this.SubtotalLabel.Location = new System.Drawing.Point(99, 132);
-            this.SubtotalLabel.Name = "SubtotalLabel";
-            this.SubtotalLabel.Size = new System.Drawing.Size(87, 23);
-            this.SubtotalLabel.TabIndex = 5;
-            this.SubtotalLabel.Text = "Subtotal";
-            // 
-            // SalesTaxLabel
-            // 
-            this.SalesTaxLabel.AutoSize = true;
-            this.SalesTaxLabel.Location = new System.Drawing.Point(32, 176);
-            this.SalesTaxLabel.Name = "SalesTaxLabel";
-            this.SalesTaxLabel.Size = new System.Drawing.Size(154, 23);
-            this.SalesTaxLabel.TabIndex = 6;
-            this.SalesTaxLabel.Text = "Sales Tax (13%)";
-            // 
-            // GrandTotalLabel
-            // 
-            this.GrandTotalLabel.AutoSize = true;
-            this.GrandTotalLabel.Location = new System.Drawing.Point(65, 220);
-            this.GrandTotalLabel.Name = "GrandTotalLabel";
-            this.GrandTotalLabel.Size = new System.Drawing.Size(121, 23);
-            this.GrandTotalLabel.TabIndex = 7;
-            this.GrandTotalLabel.Text = "Grand Total";
-            // 
-            // DVDCheckBox
-            // 
-            this.DVDCheckBox.AutoSize = true;
-            this.DVDCheckBox.Location = new System.Drawing.Point(39, 363);
-            this.DVDCheckBox.Name = "DVDCheckBox";
-            this.DVDCheckBox.Size = new System.Drawing.Size(263, 27);
-            this.DVDCheckBox.TabIndex = 8;
-            this.DVDCheckBox.Text = "Order DVD copy ($10.00)";
-            this.DVDCheckBox.UseVisualStyleBackColor = true;
-            this.DVDCheckBox.CheckedChanged += new System.EventHandler(this.DVDCheckBox_CheckedChanged);
-            // 
-            // DVDPriceLabel
-            // 
-            this.DVDPriceLabel.AutoSize = true;
-            this.DVDPriceLabel.Location = new System.Drawing.Point(84, 89);
-            this.DVDPriceLabel.Name = "DVDPriceLabel";
-            this.DVDPriceLabel.Size = new System.Drawing.Size(102, 23);
-            this.DVDPriceLabel.TabIndex = 9;
-            this.DVDPriceLabel.Text = "DVD Price";
-            this.DVDPriceLabel.Visible = false;
-            // 
-            // DVDPriceTextBox
-            // 
-            this.DVDPriceTextBox.BackColor = System.Drawing.Color.White;
-            this.DVDPriceTextBox.Enabled = false;
-            this.DVDPriceTextBox.Location = new System.Drawing.Point(215, 86);
-            this.DVDPriceTextBox.Name = "DVDPriceTextBox";
-            this.DVDPriceTextBox.ReadOnly = true;
-            this.DVDPriceTextBox.Size = new System.Drawing.Size(100, 37);
-            this.DVDPriceTextBox.TabIndex = 10;
-            this.DVDPriceTextBox.Visible = false;
-            // 
             // OrderForm
             // 
             this.AcceptButton = this.StreamButton;
@@ -364,9 +364,9 @@
             this.Menu.PerformLayout();
             this.MovieSelectedGroupBox.ResumeLayout(false);
             this.MovieSelectedGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePosterPictureBox)).EndInit();
             this.YourOrderGroupBox.ResumeLayout(false);
             this.YourOrderGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MoviePosterPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,6 +23,9 @@ namespace Assignment3
             this.selectionForm = selectionForm;
         }
 
+        /// <summary>
+        /// updates the order form from the movie referenced.
+        /// </summary>
         private void UpdateMovie()
         {
             MovieTitleTextBox.Text = movie.GetName() + " (" + movie.GetYear() + ")";
@@ -31,6 +34,10 @@ namespace Assignment3
             Calculate(0);
         }
 
+        /// <summary>
+        /// Calculates totals based on provided requirements.
+        /// </summary>
+        /// <param name="additionalCosts"></param>
         private void Calculate(double additionalCosts)
         {
             cost = movie.GetCost();
@@ -43,27 +50,30 @@ namespace Assignment3
             GrandTotalTextBox.Text = "$" + grandTotal.ToString("0.##");
         }
 
-        private void CloseApplication()
+        /// <summary>
+        /// Closes the application.
+        /// </summary>
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void ExitMenuSelection_Click(object sender, EventArgs e)
-        {
-            CloseApplication();
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            CloseApplication();
-        }
-
+        /// <summary>
+        /// Goes back to the previous form, keeping these details alive just in case.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackButton_Click(object sender, EventArgs e)
         {
             selectionForm.Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// handles the optional DVD purchase.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if(DVDCheckBox.Checked == true)
@@ -80,27 +90,26 @@ namespace Assignment3
             }
         }
 
+        /// <summary>
+        /// Sets the move of the current form.
+        /// </summary>
+        /// <param name="movie"></param>
         public void SetMovie(Movie movie)
         {
             this.movie = movie;
             UpdateMovie();
         }
 
-        private void Stream()
+        /// <summary>
+        /// End of application -- movie now streaming.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StreamButton_Click(object sender, EventArgs e)
         {
             StreamForm streamForm = new StreamForm(MovieTitleTextBox.Text, grandTotal);
             streamForm.Show();
             this.Close();
-        }
-
-        private void StreamMenuSelection_Click(object sender, EventArgs e)
-        {
-            Stream();
-        }
-
-        private void StreamButton_Click(object sender, EventArgs e)
-        {
-            Stream();
         }
     }
 }

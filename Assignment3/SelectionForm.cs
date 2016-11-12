@@ -24,6 +24,10 @@ namespace Assignment3
             orderForm = new OrderForm(this);
         }
 
+        /// <summary>
+        /// Adds the movies to a movies list for the program to use.
+        /// populates the drop down list of movies.
+        /// </summary>
         private void Initialize()
         {
             Movie BlairWitch = new Assignment3.Movie("Blair Witch", "Horror", 2016, "Adam Winguard", 2.99, "blairWitch");
@@ -95,11 +99,17 @@ namespace Assignment3
             NextButton.Enabled = true;
         }
 
+        /**
+         * Cancel button listener
+         */
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /**
+         * Next button listener
+         */
         private void NextButton_Click(object sender, EventArgs e)
         {
             orderForm.SetMovie(GetMovieByName(MovieComboBox.SelectedItem.ToString()));

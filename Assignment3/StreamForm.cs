@@ -25,12 +25,20 @@ namespace Assignment3
             Initialize();
         }
 
+        /// <summary>
+        /// start up code.
+        /// </summary>
         private void Initialize()
         {
             CCAuthLabel.Text = "Your credit card has been charged $" + total.ToString("0.##");
             MovieStreamNotificationLabel.Text = title + " will begin streaming now.";
         }
 
+        /// <summary>
+        /// Beam me up, Scotty!
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OkayButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
